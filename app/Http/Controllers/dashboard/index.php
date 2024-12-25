@@ -9,7 +9,9 @@ class index extends Controller
 {
     //
     public function main(Request $request){
-        $data = [];
+        $data = [
+            'TITLE' =>  'Selamat datang di ' . env("APP_NAME")
+        ];
 
         return view('dashboard.main')->with($data);
     }
