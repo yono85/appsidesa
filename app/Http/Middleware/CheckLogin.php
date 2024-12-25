@@ -16,6 +16,10 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // return $next($request);
+        if( Cookie::get('email') == null){
+            // return redirect('/');
+        }
         return $next($request);
     }
 }
