@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+$routes = '\App\Http\Controllers';
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/chatbot', function () {
+    // return view('welcome');
+    return view('testing.chatbot');
+});
+
+Route::match(['get', 'post'], '/botman', $routes . '\BotManController@handle');
+
+Route::group(['prefix' => '/', 'middleware' => 'CheckLogout'], function() use ($routes){
+    Route::get('/', $routes . '\home\index@main');
+    Route::get('/mail', $routes . '\home\index@mail');
+    Route::get('/login', $routes . '\home\index@login');
+});
+
+
+Route::group(['prefix' => '/dashboard', 'middleware' => 'CheckLogin'], function() use ($routes){
+    Route::get('/', $routes . '\dashboard\index@main');
 });
