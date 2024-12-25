@@ -38,7 +38,6 @@
 
     </body>
 
-  
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
 
@@ -46,15 +45,11 @@
 
 	    var botmanWidget = {
 
-	        aboutText: 'ssdsd',
+	        aboutText: 'chatbot {{env("APP_NAME")}}',
 
 	        introMessage: "✋ Hi! I'm form ItSolutionStuff.com"
-
 	    };
-
     </script>
-
-  
 
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 
