@@ -25,6 +25,7 @@ Route::group(['prefix' => '/', 'middleware' => 'CheckLogout'], function() use ($
     Route::get('/', $routes . '\home\index@main');
     Route::get('/mail', $routes . '\home\index@mail');
     Route::get('/login', $routes . '\home\index@login');
+    Route::post('/login', $routes . '\access\index@login');
 });
 
 

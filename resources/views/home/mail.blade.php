@@ -31,38 +31,40 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form style="padding:20px 40px 40px">
+            <form style="padding:20px 40px 40px" action="/mail/create" >
                 <div class="card-body">
                     <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Isikan nama lengkap Anda" maxlength="75">
                     </div>
                     <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="phone">No. HP</label>
+                    <input type="password" class="form-control numberStatic" id="phone" name="phone" type="text" maxlength="15">
                     </div>
                     <div class="form-group">
-                    <label for="exampleSelectRounded0">Flat <code>.rounded-0</code></label>
-                    <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                    <option>Value 1</option>
-                    <option>Value 2</option>
-                    <option>Value 3</option>
+                    <label for="type">Jenis Pesan</label>
+                    <select class="custom-select rounded-0" id="type" name="type">
+                        <option value="-1">Pilih...</option>
+                        <option value="1">Value 1</option>
+                        <option value="2">Value 2</option>
+                        <option value="3">Value 3</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                        <label>Textarea</label>
-                        <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                        </div>
+                    <label>Isi Pesan</label>
+                    <textarea class="form-control" rows="3" placeholder="Tuliskan pesan disini..." name="message" maxlength="150"></textarea>
+                    </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary" style="width:25%">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="width:25%">Kirim Pesan</button>
                 </div>
+                @csrf
             </form>
         </div>
-    </div>å
+    </div>
 <!-- /.col-md-6 -->
 </div>
 
