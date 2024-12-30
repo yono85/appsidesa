@@ -25,7 +25,7 @@
           <li class="nav-header">Penduduk & Desa</li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Master Data
@@ -75,6 +75,16 @@
               <p>User</p>
             </a>
           </li>
+
+          <!-- <li class="nav-item">
+            <a href="/dashboard/logout" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li> -->
+
 
         </ul>
       </nav>

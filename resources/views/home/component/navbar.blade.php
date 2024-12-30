@@ -1,6 +1,6 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-        <a href="{{ asset('adminlte/index3.html') }}" class="navbar-brand">
+        <a href="/" class="navbar-brand">
         <img src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Sidesa</span>
         </a>
@@ -21,7 +21,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="/mail" class="nav-link">Kotak Surat</a>
+                <a href="/pengaduan" class="nav-link">Kotak Surat</a>
             </li>
 
             <li class="nav-item">

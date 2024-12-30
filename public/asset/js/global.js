@@ -1,6 +1,7 @@
 function setNumber(e){
     var value = e.val();
-    var res = value.replace(/[^0-9a-zA-Z' ']/g,'');
+    var res = value.replace(/[^0-9' ']/g,'');
+
     e.val( res );
 }
 

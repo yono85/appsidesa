@@ -18,7 +18,7 @@ class CheckLogin
     {
         // return $next($request);
         if( Cookie::get('email') == null){
-            // return redirect('/');
+            return redirect('/');
         }
         return $next($request);
     }

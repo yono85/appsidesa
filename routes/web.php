@@ -23,11 +23,14 @@ Route::match(['get', 'post'], '/botman', $routes . '\BotManController@handle');
 
 Route::group(['prefix' => '/', 'middleware' => 'CheckLogout'], function() use ($routes){
     Route::get('/', $routes . '\home\index@main');
-    Route::get('/mail', $routes . '\home\index@mail');
+    Route::get('/pengaduan', $routes . '\home\index@mail');
     Route::get('/login', $routes . '\home\index@login');
-    Route::post('/login', $routes . '\access\index@login');
 });
 
+Route::post('/login', $routes . '\access\index@login');
+Route::post('/mail/create', $routes . '\mail\index@create');
+
+Route::get('/dashboard/logout', $routes . '\access\index@logout');
 
 Route::group(['prefix' => '/dashboard', 'middleware' => 'CheckLogin'], function() use ($routes){
     Route::get('/', $routes . '\dashboard\index@main');

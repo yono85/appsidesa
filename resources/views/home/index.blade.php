@@ -16,6 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('adminlte/plugins/toastr/toastr.min.css') }}">
 
   <link rel="stylesheet" href="{{ asset('asset/css/default.css') }}">
 
@@ -64,5 +65,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- <script src="{{ asset('adminlte/dist/js/adminlte.min.js') }}"></script> -->
   <!-- AdminLTE for demo purposes -->
   <!-- <script src="{{ asset('adminlte/dist/js/demo.js') }}"></script> -->
+
+  <script src="{{ asset('adminlte/plugins/toastr/toastr.min.js') }}"></script>
+
 </body>
 </html>
