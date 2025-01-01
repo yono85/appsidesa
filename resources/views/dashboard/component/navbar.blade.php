@@ -10,39 +10,41 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Hi, Admin</a>
-        </li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <!-- <i class="far fa-bell"></i> -->
-             <span>Hi, Admin</span>
-            <!-- <span class="badge badge-warning navbar-badge">15</span> -->
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">@gmail.com</span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i> Sunting
-              <!-- <span class="float-right text-muted text-sm">3 mins</span> -->
-            </a>
-            <a href="/dashboard/logout" class="dropdown-item color-red">
-              <i class="fas fa-envelope mr-2"></i> Logout
-              <!-- <span class="float-right text-muted text-sm">3 mins</span> -->
-            </a>
-            <!-- <div class="dropdown-divider"></div> -->
-            <!-- <a href="#" class="dropdown-item">
-              <i class="fas fa-users mr-2"></i> 8 friend requests
-              <span class="float-right text-muted text-sm">12 hours</span>
-            </a> -->
-            <!-- <div class="dropdown-divider"></div> -->
-            <!-- <a href="#" class="dropdown-item">
-              <i class="fas fa-file mr-2"></i> 3 new reports
-              <span class="float-right text-muted text-sm">2 days</span>
-            </a> -->
-            <!-- <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a> -->
-          </div>
+    <li class="nav-item dropdown user-menu">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+          <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="user-image img-circle elevation-2" alt="User Image">
+          <span class="d-none d-md-inline">{{ $ACCOUNT->name }}</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+          <!-- User image -->
+          <li class="user-header bg-primary">
+            <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+
+            <p>
+              {{ $ACCOUNT->name }}
+              <small>{{ $ACCOUNT->email }}</small>
+            </p>
+          </li>
+          <!-- Menu Body -->
+          <!-- <li class="user-body">
+            <div class="row">
+              <div class="col-4 text-center">
+                <a href="#">Followers</a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="#">Sales</a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="#">Friends</a>
+              </div>
+            </div>
+          </li> -->
+          <!-- Menu Footer-->
+          <li class="user-footer">
+            <a href="#" class="btn btn-default btn-flat">Profile</a>
+            <a href="/dashboard/signout" class="btn btn-default btn-flat float-right">Sign out</a>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>

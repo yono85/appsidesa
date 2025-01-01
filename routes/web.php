@@ -19,8 +19,10 @@ Route::get('/chatbot', function () {
     return view('testing.chatbot');
 });
 
+// BOTMAN /CHATBOT
 Route::match(['get', 'post'], '/botman', $routes . '\BotManController@handle');
 
+// HOME PAGE
 Route::group(['prefix' => '/', 'middleware' => 'CheckLogout'], function() use ($routes){
     Route::get('/', $routes . '\home\index@main');
     Route::get('/pengaduan', $routes . '\home\index@mail');
@@ -28,10 +30,15 @@ Route::group(['prefix' => '/', 'middleware' => 'CheckLogout'], function() use ($
 });
 
 Route::post('/login', $routes . '\access\index@login');
+
+// POST PENGADUAN
 Route::post('/mail/create', $routes . '\mail\index@create');
 
-Route::get('/dashboard/logout', $routes . '\access\index@logout');
+//SIGNOUT
+Route::get('/dashboard/signout', $routes . '\access\index@logout');
 
+
+// DASHBOARD
 Route::group(['prefix' => '/dashboard', 'middleware' => 'CheckLogin'], function() use ($routes){
     Route::get('/', $routes . '\dashboard\index@main');
 });
